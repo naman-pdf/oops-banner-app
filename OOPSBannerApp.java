@@ -1,19 +1,27 @@
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
+        printBanner("OOPS");
+    }
 
-        String[] banner = {
-            String.join("   ", " ***** ", " ***** ", " ***** ", " ***** "),
-            String.join("   ", "*     *", "*     *", "*     *", "*     *"),
-            String.join("   ", "*     *", "*     *", "*     *", "*     *"),
-            String.join("   ", "*     *", "*     *", "*     *", "*     *"),
-            String.join("   ", "*     *", "*     *", "*     *", "*     *"),
-            String.join("   ", "*     *", "*     *", "*     *", "*     *"),
-            String.join("   ", " ***** ", " ***** ", " ***** ", " ***** ")
-        };
+    public static void printBanner(String word) {
 
-        for (String line : banner) {
-            System.out.println(line);
+        if (word.equals("OOPS")) {
+
+            String[] banner = {
+                " *****    *****    *****    ***** ",
+                "*     *  *     *  *     *  *     *",
+                "*     *  *     *  *     *  *     *",
+                "*     *  *     *  *     *  *     *",
+                "*     *  *     *  *     *  *     *",
+                "*     *  *     *  *     *  *     *",
+                " *****    *****    *****    ***** "
+            };
+
+            for (String line : banner) {
+                System.out.println(line);
+            }
+
         }
 
     }
