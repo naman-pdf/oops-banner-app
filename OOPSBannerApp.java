@@ -1,29 +1,62 @@
-public class OOPSBannerApp {
+public class Main {
 
-    public static void main(String[] args) {
-        printBanner("OOPS");
+```
+// Inner class to store character and its pattern
+static class CharacterPattern {
+    char character;
+    String[] pattern;
+
+    CharacterPattern(char character, String[] pattern) {
+        this.character = character;
+        this.pattern = pattern;
     }
 
-    public static void printBanner(String word) {
+    public String[] getPattern() {
+        return pattern;
+    }
+}
 
-        if (word.equals("OOPS")) {
+public static void main(String[] args) {
 
-            String[] banner = {
-                " *****    *****    *****    ***** ",
-                "*     *  *     *  *     *  *     *",
-                "*     *  *     *  *     *  *     *",
-                "*     *  *     *  *     *  *     *",
-                "*     *  *     *  *     *  *     *",
-                "*     *  *     *  *     *  *     *",
-                " *****    *****    *****    ***** "
-            };
+    CharacterPattern O = new CharacterPattern('O', new String[]{
+            " *** ",
+            "*   *",
+            "*   *",
+            "*   *",
+            "*   *",
+            "*   *",
+            " *** "
+    });
 
-            for (String line : banner) {
-                System.out.println(line);
-            }
+    CharacterPattern P = new CharacterPattern('P', new String[]{
+            "**** ",
+            "*   *",
+            "*   *",
+            "**** ",
+            "*    ",
+            "*    ",
+            "*    "
+    });
 
+    CharacterPattern S = new CharacterPattern('S', new String[]{
+            " ****",
+            "*    ",
+            "*    ",
+            " *** ",
+            "    *",
+            "    *",
+            "**** "
+    });
+
+    CharacterPattern[] word = {O, O, P, S};
+
+    for (int i = 0; i < 7; i++) {
+        for (CharacterPattern c : word) {
+            System.out.print(c.getPattern()[i] + "  ");
         }
-
+        System.out.println();
     }
+}
+```
 
 }
